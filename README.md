@@ -43,6 +43,8 @@ app.use(createPinia())
 
 3.定义store
 
+Composition API
+
 ```
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
@@ -63,6 +65,21 @@ export const useStore = defineStore('main',()=> {
     }
     
     return { count,  increment, phoneHidde }
+})
+```
+
+Options API
+
+```
+export const useStore = defineStore('main', {
+  state: () => ({
+  }),
+   getters: {
+  },
+  actions: {
+    increment() {
+    }
+  },
 })
 ```
 
