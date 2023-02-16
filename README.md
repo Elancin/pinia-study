@@ -47,7 +47,7 @@ app.use(createPinia())
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 // 第一个参数是应用程序中 store 的唯一 id
-export const useStore = defineStore('main', {
+export const useStore = defineStore('main',()=> {
 
 // ref() 就是 state 属性
     const count = ref(100)
@@ -61,6 +61,8 @@ export const useStore = defineStore('main', {
     function increment() {
         ...
     }
+    
+    return { count,  increment, phoneHidde }
 })
 ```
 
