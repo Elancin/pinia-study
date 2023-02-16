@@ -72,8 +72,10 @@ Options API
 
 ```
 export const useStore = defineStore('main', {
-  state: () => ({
-  }),
+  state: () => {
+    return {
+    }
+  },
    getters: {
   },
   actions: {
